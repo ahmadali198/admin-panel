@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+  
+        <!-- Sidebar -->
+<div class="bg-dark text-white" id="sidebar-wrapper">
+    <div class="sidebar-heading">Admin Panel</div>
+    
+    <div class="list-group list-group-flush">
+        <a href="#dashboard" class="list-group-item list-group-item-action bg-dark text-white">
+            <i class="bi bi-house-door"></i> Dashboard
+        </a>
+        <a href="#products" class="list-group-item list-group-item-action bg-dark text-white">
+            <i class="bi bi-box"></i> Manage Products
+        </a>
+        <a href="#orders" class="list-group-item list-group-item-action bg-dark text-white">
+            <i class="bi bi-cart"></i> View Orders
+        </a>
+        <a href="#users" class="list-group-item list-group-item-action bg-dark text-white">
+            <i class="bi bi-person"></i> User Accounts
+        </a>
+    </div>
+</div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0 mb-4">
+                        <li class="nav-item">
+                            <a href="login.html">
+                                <button class="btn btn-outline-success">Login</button>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a href="signup.html">
+                                <button class="btn btn-outline-success">Signup</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="content">
+                    <section id="dashboard" class="mt-4">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card bg-primary text-white">
+                                    <div class="card-body">
+                                        <h5>Total Sales</h5>
+                                        <h3>$12345</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card bg-success text-white">
+                                    <div class="card-body">
+                                        <h5>Total Orders</h5>
+                                        <h3>1234</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card bg-warning text-white">
+                                    <div class="card-body">
+                                        <h5>Total Products</h5>
+                                        <h3>567</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card bg-danger text-white">
+                                    <div class="card-body">
+                                        <h5>Total Users</h5>
+                                        <h3>789</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sales Overview</h5>
+                                        <canvas id="salesChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Orders Overview</h5>
+                                        <canvas id="ordersChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="products" class="mt-4">
+                        <h2>Manage Products</h2>
+                        <!-- Product management content goes here -->
+                    </section>
+                    <section id="orders" class="mt-4">
+                        <h2>View Orders</h2>
+                        <!-- Orders content goes here -->
+                    </section>
+                    <section id="users" class="mt-4">
+                        <h2>User Accounts</h2>
+                        <!-- User account management content goes here -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html> 
+
+
+
+  

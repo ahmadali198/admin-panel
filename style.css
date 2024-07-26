@@ -1,0 +1,136 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar Styling */
+#sidebar-wrapper {
+    width: 18f0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #343a40, #23272b); /* Gradient background */
+    color: #ffffff; /* Text color */
+    transition: all 0.3s;
+    padding: 20px; /* Padding for sidebar content */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Shadow effect */
+}
+
+/* Sidebar Header */
+#sidebar-wrapper .sidebar-heading {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Sidebar Menu Items */
+#sidebar-wrapper .list-group {
+    border: none;
+    padding: 0;
+}
+
+#sidebar-wrapper .list-group-item {
+    border: none;
+    padding: 15px 20px; /* Increase padding for better touch targets */
+    font-size: 1.1rem;
+    border-radius: 0.25rem; /* Rounded corners */
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-wrapper .list-group-item i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: #495057;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Profile Section */
+#sidebar-wrapper .profile-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#sidebar-wrapper .profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#sidebar-wrapper .profile-section h5 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Page Content Wrapper */
+#page-content-wrapper {
+    margin-left: 250px; /* Adjust margin to account for sidebar */
+    padding: 20px; /* Add padding to content */
+    transition: all 0.3s;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -250px;
+}
+
+/* Toggle Button */
+#menu-toggle {
+    margin-left: auto;
+    margin-right: 15px; /* Ensure some space from the edge */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0.25rem; /* Rounded corners */
+    margin-bottom: 20px; /* Add space below cards */
+}
+
+/* Section Visibility */
+.content section {
+    display: none;
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.content section.active {
+    display: block;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        width: 70%;
+        position: absolute;
+        z-index: 1000;
+        box-shadow: none; /* Remove shadow for mobile view */
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #menu-toggle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
